@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link href="./css/framework.css" rel="stylesheet"/>
+        <link href="./css/style.css" rel="stylesheet"/>
+        <title>Flexbox layout</title>
+    </head>
+    <body>
+        <section class="container">
+            <header class="bg-silver site-top">
+                <div class="flex">
+                   <div class="w50 left text-white logo">LogoMarca</div>
+                   <div class="w50 right">
+                        <ul>
+                            <li><a class="text-white" href="">Home</a></li>
+                            <li><a class="text-white" href="">About</a></li>
+                            <li><a class="text-white" href="">Contact</a></li>
+                        </ul>
+                    </div><!--menu-->
+                </div>
+           </header>
+        </section><!--container-->
+
+        <section class="container bg-light-blue">
+            <div class="flex">
+                <div class="w100 center slider">
+                    <p>My text for a slider.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="container promo">
+            <div class="flex">
+                <div class="w33 center order1">
+                    <h2>Title</h2>
+                    <p>There's a description here</p>
+                </div>
+                <div class="w33 center order2">
+                    <h2>Title</h2>
+                    <p>There's a description here</p>
+                </div>
+                <div class="w33 center order3">
+                    <h2>Title</h2>
+                    <p>There's a description here</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

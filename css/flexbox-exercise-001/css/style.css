@@ -1,0 +1,49 @@
+/* specific classes*/
+.logo{
+    font-size: 23px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header.site-top{
+    padding: 20px 0;
+}
+
+header.site-top ul li{
+    position: relative;
+    top: 5px;
+    padding: 0 20px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+header.site-top a{
+    text-decoration: none;
+}
+
+.slider{
+    min-height: 400px;
+}
+.slider p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    display: inline-block;
+    border-bottom: 4px solid white;
+    color: white;
+}
+
+.promo{
+    padding: 40px 0;
+}
+
+@media screen and(max-width: 768px){
+    div.w50, div.w33{
+        width: 100%;
+    }
+
+    .center,.left,.right{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}

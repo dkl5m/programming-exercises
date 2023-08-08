@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <style>
+            .content h2 span{
+                font-size: 13px;
+                cursor: pointer;
+            }
+
+            .content p{
+                overflow: hidden;
+                height: 20px;
+                transition: 1s;
+            }
+
+            .show{
+                height: 200px !important;
+            }
+        </style>
+
+        <div class="content">
+            <h2>Content's Title <span>See more!</span> </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac dolor in sem commodo pretium. Aenean sollicitudin turpis eget egestas laoreet. Sed ultricies eleifend est, at tempor enim laoreet at. Nullam consequat gravida dui. Ut auctor pharetra augue a commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec id nisi sem. Mauris suscipit dolor id lacus malesuada, nec faucibus diam commodo. In hac habitasse platea dictumst. In in consequat nisl. </p>
+        </div>
+    </body>
+
+    <script>
+        
+        var span = document.querySelector('.content span');
+
+        span.addEventListener('click', function(){
+           var content = document.querySelector('.content p');
+        
+           if(content.classList.contains('show')){
+                span.innerHTML = 'See more!';
+                content.classList.remove('show');
+           }else{
+                span.innerHTML = 'See less!';
+                content.classList.add('show');
+           }
+        });
+    </script>
+</html>

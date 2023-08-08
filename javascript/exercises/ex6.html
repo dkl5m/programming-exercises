@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <body>
+
+        <!--
+        <script>
+            var content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra fermentum pharetra. Aliquam iaculis orci purus. Integer commodo porta nibh nec molestie. Curabitur pellentesque sollicitudin elit, in ultrices augue aliquam lobortis. Quisque fermentum augue ac tortor condimentum, pharetra auctor quam luctus. In vestibulum purus vel risus pulvinar lacinia. Phasellus quis odio sed erat feugiat euismod. Nulla pretium, sem nec ultrices rhoncus, tortor mauris imperdiet turpis, iaculis finibus tortor mauris non nunc. Maecenas molestie, odio non facilisis varius, arcu magna congue urna, non iaculis ex lorem tempus orci. Vivamus quis pulvinar lorem. In vel sem tortor.`
+            /* template string*/
+
+            console.log(content);
+
+            var name = 'Chris';
+            var content2 = `Name is ${name}!`;
+
+            console.log(content2);
+        </script>
+        -->
+
+        <!--
+        <script>
+            {
+                //use 'let' to vars work just inside the scope
+                let name = 'Chris';
+                let tests = function(){
+                    console.log('Hello!');
+                }
+                tests();
+            }
+            // tests(); Function doesn't work out of the scope
+            /* block scope */
+        </script>
+        -->
+
+        <!---->
+        <script>
+                /*
+                function testes(){
+
+                }// old model function
+
+                const teste = ()=>{
+
+                }// new model function (arrow function)
+                */
+
+                const tests = ()=>{
+                    alert('Hello world!');
+                }
+
+                tests();
+
+                const tests2 = (pair)=>{
+                    alert(pair);
+                }//with parameters
+
+                tests2('Hello World!');
+
+                const tests3 = (pair2)=>{
+                    pair2();
+                }
+
+                tests3(()=>{
+                    alert('Hello stupid!');
+                });//calling function
+
+                const tests4 = (text, pair3)=>{
+                    pair3(text);
+                }
+
+                tests4('Hi stupid!',(text)=>{
+                    alert(text);
+                });//calling parameters and function
+        </script>
+    </body>
+</html>

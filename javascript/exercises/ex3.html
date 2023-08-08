@@ -1,0 +1,50 @@
+<html>
+    <!--
+        <body>
+            <div class="tests">
+                <div class="inside-tests">Text</div>
+            </div>
+
+            <div class="tests">
+                <div class="inside-tests">Text2</div>
+            </div>
+        </body>
+
+        <script>
+            var els = document.querySelectorAll('.tests');
+            els[1].innerHTML = '<div class="inside-testes-via-js">Oi2</div>';
+        </script>
+    -->
+
+    <body>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                margin-left: 0;
+            }/* box style */
+
+            .leftAnim{
+                transition: 1s;
+                margin-left: 90px;
+                margin-top: 90px;
+                background-color: purple;
+            }/* Animation */
+        </style><!-- style -->
+
+        <div class="box"></div><!-- box class -->
+
+        <script>
+            var box = document.querySelectorAll('.box')[0];
+            /**
+            setTimeout(()=>{
+                box.classList.add('leftAnim');
+            }, 1000);
+            **/
+            box.addEventListener('click',()=>{
+                box.classList.add('leftAnim');
+            });
+        </script>
+    </body>
+</html>

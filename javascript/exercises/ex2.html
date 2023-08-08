@@ -1,0 +1,55 @@
+<html>
+    <body>
+        <!--
+        <p>Hello World!</p>
+
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+
+        <script src="./js/js-ex1.js"></script>
+        -->
+
+        <!--
+        <div id="box"></div>
+        -->
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </body>
+    <script>
+        /**
+        var el = document.getElementById('box');
+            el.style.marginTop = 100;
+            el.style.width = 100;
+            el.style.height = 100;
+            el.style.backgroundColor = 'red';
+            el.style.marginLeft = 200;
+        **/
+
+        var elements = document.getElementsByClassName('box');
+
+        /**
+        var el = elements[0];
+            el.style.width = 100;
+            el.style.height = 100;
+            el.style.marginLeft = 100;
+            el.style.marginTop = 100;
+            el.style.backgroundColor = 'blue';
+            **/
+
+        for(var i = 0; i < elements.length; i++){
+            var el = elements[i];
+            el.style.width = 100;
+            el.style.height = 100;
+            el.style.marginLeft = 100;
+            el.style.marginTop = 100;
+            el.style.backgroundColor = 'blue';
+        }
+    </script>
+</html>

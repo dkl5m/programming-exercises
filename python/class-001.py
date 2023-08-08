@@ -1,0 +1,136 @@
+"""
+# Numbers
+# integers - int: ..., -2, -1, 0, 1, 2, ...;
+# float: -3, 3.4;
+# complex: 1+2j;
+
+# Variables
+# keep data values
+# x = 5; x keep the value 5
+
+# w = 'Ana' = "Ana";
+# A-z, 0-9, _
+# height, Height, HEIGHT
+
+
+h, j, l = 1, 3, 5;
+print(h);
+print(j, l);
+
+a = b = c = 4;
+print(a, b, c);
+
+h = b + h;
+print(h);
+
+x = 'Ana';
+#l = x + b;
+"""
+
+#Strings
+#a = """Hello, this is
+#a Python course""";
+#"""
+#print(a);
+"""
+b = ' Hello '
+print(b.strip());
+print(b.lower());
+print(b.upper());
+
+c = 'World';
+d = b + c;
+print(d);
+"""
+
+"""
+Type
+a = 'Hello';
+b = 1;
+c = 2.;
+d = 1 + 2j;
+print(type(a));
+print(type(b));
+print(type(c));
+print(type(d));
+"""
+
+"""
+#Casting
+#int
+x = int(2);
+y = int(2.5);
+z = int('2');
+print(x, y, z);
+
+#float
+x = float(2);
+y = float(2.5);
+z = float('2');
+print(x, y, z);
+
+#str
+t = str('s1');
+r = str(2);
+z = str(2.3);
+
+print('Var t type is: ', type(t));
+print('Var r type is: ', type(r));
+print('Var z type is: ', type(z));
+"""
+
+"""
+# Scope
+# Var scope
+x = 5; # global var
+
+def function():
+    x = 3 # local var
+    print('Local var value:', x);
+
+function()
+print('Global var value:', x);
+
+# Best way to name a variable
+name = 'Mann';
+height = 1.74;
+cpf = "000.000.000-00";
+age = 24;
+
+# Arithmetic operators
+# sum +
+# subtraction -
+# multiplication *
+# division /
+# module %
+# exp **
+# int div //
+
+x = 2;
+y = 4;
+a = x + y;
+b = x - y;
+c = x * y;
+d = x / y;
+e = x % y;
+f = x ** y;
+g = x // y;
+print(a, b, c, d, e, f, g);
+"""
+
+# Boolean: true or false
+# Logical operators
+# and, or, not
+
+# True table
+# And
+# false and false = false
+# false and true = false
+# true and false = false
+# true and true = true
+
+# Or
+# false or false = false
+# false or true = true
+# true or false = true
+# true or true = true

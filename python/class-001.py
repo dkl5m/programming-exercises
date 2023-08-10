@@ -134,3 +134,94 @@ print(a, b, c, d, e, f, g);
 # false or true = true
 # true or false = true
 # true or true = true
+
+# Not
+# Not true = false
+# Not false = true
+
+"""
+# Input function - save user data
+
+# 1st way
+print("What is your name? ");
+name = input();
+print("Hello, ", name);
+
+# 2nd way
+# age = input("How old are you? ");
+# print("You're", age, "old!");
+
+name = input("What is your name? ");
+age = input("How old are you? ");
+print("Your name is {0} and you're {} years old!".format(name, age));
+
+# 3rd way
+name = input("What is your name? ");
+age = input("How old are you? ");
+print(f"Your name is {name} and you're {age} years old!");
+"""
+
+"""
+# Comparison operators
+
+# Equality operator ==
+# Dif operator !=
+# greater than operator >
+# less than operator <
+# greater than or equal to >=
+# less than operator or equal to <=
+
+x = 3; #int
+y = 5;
+z = 3.0; #float
+w = 8;
+
+print(x == z);
+print(x != z);
+print(w > x);
+print(w < x);
+print(x >= z);
+print(x <= z);
+print(x >= y);
+
+
+# Associative operators
+name = "Kang"
+
+# In Operator - x in y
+# Not in Operator - x not in y
+
+x = "pernambuco";
+y = "nam";
+print(y in x);
+print("nam" in x);
+print('per' in x);
+print('camper' in x);
+print('per' not in x);
+
+
+# If, else or elif (else if);
+
+x = 5;
+y = 5;
+
+if(x < y):
+    print("y is greater than x");
+elif(x > y):
+    print("x is greater than y");
+else:
+    print("x is equal to y");
+"""
+
+x = 5;
+y = 4;
+z = 3;
+
+# Smaller version
+#if(x < y): print("y is greater than x");
+
+#print("B") if x > y else print("A"); #Ternary operator
+
+if x > y:
+    if x > z:
+        print("x greater than y and z");

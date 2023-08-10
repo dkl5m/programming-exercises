@@ -40,3 +40,13 @@ async function tests2(){
 tests2();
 
 //use of await in asyncronows functions(just execute hello when the promise is resolved)
+
+var p = document.getElementsByTagName('p');
+
+for(var i = 0; i < 10; i ++){
+    p[0].innerHTML = p[0].innerHTML + "- algo -";
+}
+
+for(var k = 1; k < p.length; k ++){
+    p[k].innerHTML = 'Manipulado via JS!' + k;
+}

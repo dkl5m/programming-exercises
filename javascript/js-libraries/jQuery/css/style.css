@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+.article1{
+    background-color: blue;
+}
+
+.article2{
+    margin-top: 30px;
+    background-color: beige;
+}
+
+.box{
+    width: 100%;
+    padding: 40px 3%;
+    background-color: rgb(210, 210, 210);
+    color: black;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.box2{
+    /*display: none;*/
+    background-color: blueviolet;
+}

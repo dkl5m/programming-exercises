@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+.article1{
+    background-color: blue;
+}
+
+.article2{
+    margin-top: 30px;
+    background-color: beige;
+}
+
+.box{
+    width: 100%;
+    padding: 20px;
+    background-color: #ccc;
+}
+
+h1.text1{
+    color: red;
+}

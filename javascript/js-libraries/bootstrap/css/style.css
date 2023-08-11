@@ -1,0 +1,30 @@
+h2.logo{
+    color: white;
+    margin: 0;
+}
+
+.menu{
+    background: rgb(130, 130, 130);
+    padding: 10px 0;
+}
+
+.menu-list{
+    position: relative;
+    top: 8px;
+}
+
+.menu-list ul{
+    display: inline-block;
+}
+
+.menu-list li{
+    display: inline-block;
+    font-size: 15px;
+    padding: 0 10px;
+    text-align: left;
+}
+
+.menu-list a{
+    color: white;
+    text-decoration: none;
+}

@@ -84,3 +84,76 @@ else if(grade < 40){
     console.log("FAILED");
 };
 */
+
+/*
+// BOOLEAN LOGIC
+
+// ! NOT
+
+let magic = !false;
+
+if(magic){
+    alert("Magic!");
+}
+else{
+    alert("Not magic!");
+};
+
+
+// && AND
+
+let points = 1000;
+let hoursGame = 3;
+
+if(points == 1000 && hoursGame > 2){
+    alert("Get bonus!");
+}
+else{
+    alert("No bonus!");
+};
+
+// 1 * 1 = 1
+// 1 * 0 = 0
+
+
+// || OR
+
+let points = 1000;
+let hoursGame = 1;
+let lifes = 1;
+
+if(points < 1000 || lifes < 2){
+    alert("Get bonus!");
+}
+else{
+    alert("No bonus!");
+};
+
+// 0 + 1 = 1
+// 1 + 0 = 1
+// 1 + 1 = 1
+// 0 + 0 = 0
+
+// Exercise 3
+// Create a system that will give the player different types of keys. The program should issue an alert with which key the player will win:
+// If he has 3 lives and more than 1000 points = blue key;
+// If he has less than 3 lives or less than 1000 points = green key;
+// If they have 1000 points and it's not magic = orange key.
+
+let lives = 5;
+let magic = true;
+let points = 1000;
+
+if(lives >= 3 && points > 1000){
+    alert("The player received a blue key!");
+}
+else if(lives < 3 || points < 1000){
+    alert("The player received a green key!");
+}
+else if(points == 1000 && magic == false){
+    alert("The player received a orange key!");
+}else{
+    alert("The player received a white key!");
+};
+*/
+

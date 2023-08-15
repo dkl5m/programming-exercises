@@ -192,15 +192,15 @@ let player = {
     magic: 85,
     map: {
         nameMap: "Saturnalia",
-        cities: 40,
-        visitedCities: 22,
-        foundObjects: 3
+        cities: ['New York', 'Los Angeles', 'San Francisco', 'Boston'],
+        visitedCities: ['Los Angeles', 'New York'],
+        foundObjects: ['house-key', 'metal-bat', 'gloves', 'mask']
     }
 };
 console.log(player);
 
-player.haveCup = true;
+player.hasCup = true;
 console.log(player);
 
-delete player.haveCup;
+delete player.hasCup;
 console.log(player);

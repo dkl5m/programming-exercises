@@ -159,7 +159,7 @@ while(colided){
 }
 
 console.log(coins);
-*/
+
 
 // Exercise 3
 // A certain old computer can store numbers up to 9999. Your mission is to create an infinite loop that adds numbers 1 by 1, and create a condition that interrupts the cycle if the number reaches 9999.
@@ -175,3 +175,42 @@ while(true){
 }
 
 console.log(number);
+*/
+
+
+/*
+// FOR
+// less dangerous than WHILE, and accepts continue and break too.
+
+// declaration
+let x = 10;
+for(let i = 0; i < x; i++){
+    console.log('iteracao', i);
+};
+
+// example
+
+let population = 100;
+
+for(let  iterator = 0; iterator < 10; iterator++){
+    population = population + population*0.05;
+};
+
+console.log(Math.trunc(population));
+
+*/
+
+// Exercise 4
+// Create an algorithm that prints the Celsius-Fahrenheit conversion table to the range desired by the user.
+// The algorithm must prompt the user for the upper bound and lower bound of the range.
+// Conversion formula: C=5*(F-32)/9
+
+function fahrenheitToCelsius(infLimit, supLimit){
+    var Celsius = 0;
+    
+    for (let iterator = infLimit; iterator < supLimit; iterator++){
+        var Fahrenheit = iterator;
+        Celsius = (5 * ((Fahrenheit - 32)/ 9));
+        console.log(Celsius);
+    }
+}

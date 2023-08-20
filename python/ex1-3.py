@@ -65,6 +65,7 @@ real = dollar * cotationValue;
 print(f"The value is: R$ {real:.2f}. Cotation: {cotationValue:.2f}.");
 """
 
+
 """
 Python Exercise 02
 
@@ -92,6 +93,7 @@ else:
     print("MAJOR");
 """
 
+"""
 #2
 age = int(input("Type your age: "));
 if age < 5: print("Not allowed");
@@ -100,3 +102,95 @@ elif 8 <= age <= 10: print("childish B");
 elif 11 <= age <= 13: print("juvenile A");
 elif 14 <= age <= 17: print("juvenile B");
 else: print("not specified");
+"""
+
+
+"""
+Python Exercise 03
+All exercises have some repeating form logic that you can use
+repeating loops to develop them.
+01 - Write a program that reads 5 values ​​and finds the largest and smallest of them. show the
+result.
+    Analysis:
+    I could assume that the smallest was any small number (or that the largest
+    was a large number) instead of initially assuming it to be the first?
+    Answer: No!
+    
+    Example: Suppose that the value -500 was assigned to the smallest variable and that the
+    user entered only values ​​greater than -500 (example: -10, -9, 0, 6, 7 and 450),
+    if the value stored in the smaller variable is never changed, the assumption would be
+    incorrect - logic error - because the supposedly smaller value would be outside the set
+    values ​​entered and therefore valid). The same reasoning applies to larger
+    
+    Solution: Assume that the major and minor variables assume the value of the first
+    typed element, outside the repetition structure. Thus, in the case of the minor
+    element, by comparing the value currently stored in this variable with the
+    other typed elements (from the 2nd onwards) it can be changed (or not, if
+    the smallest of all entered values ​​is effectively the first). Likewise,
+    the value of the larger variable can be changed, if there is one between the numbers
+    subsequently typed a value greater than the one considered the highest until then.
+
+02 - Write a program to calculate the sums:
+S = 3/40 + 32 /39 + 33 /38 + 34 /37 + 340/1
+S = 480/2 + 475/22 + 470/23 + 465/24 + 460/25 + (first 20 terms)
+S = 1/2 + 3/23 + 7/25 + 15/27 + 31/29 + (first 15 terms)
+"""
+
+
+"""
+#1
+smallestValue = largestValue = number = 0;
+
+for x in range(5):
+    if x == 0:
+        #number = int(input("Type a number and press enter: "));
+        smallestValue = largestValue = number = int(input("Type a number and press enter: "));
+    elif x > 0:
+        number = int(input("Type a number and press enter: 444"));
+        if number > smallestValue:
+            largestValue = number;
+        elif number < smallestValue:
+            smallestValue = number;
+        else:
+           number = smallestValue;
+    print(f"smallest: {smallestValue}; largest: {largestValue}.");
+
+"""
+
+"""
+# 2 - a)
+
+sum = 3/40 + 32 /39 + 33 /38 + 34 /37 + 340/1;
+print(f"A) Value = {sum}.");
+
+# 2 - b)
+
+numerator = 480;
+denominator = 2;
+sum = numerator / denominator;
+
+for x in range(20):
+    if x == 0:
+        numerator = 480;
+        denominator = 2;
+        sum = numerator / denominator;
+    elif x > 0:
+        numerator = 480 - (x - 1) * 5;
+        denominator = 21 + (x - 1) * 1;
+        sum += numerator / denominator;
+print(f"Sum value: {sum}.");
+
+#2 c)
+
+numerator = 1;
+
+for x in range(15):
+    if(x == 0):
+        denominator = 2;
+        sum = numerator / denominator;
+    elif(x > 0):
+        numerator = numerator + (2 ** (x - 1));
+        denominator = 21 + 2 * (x - 1);
+        sum += numerator / denominator;
+print(f"Sum value: {sum}.");
+"""

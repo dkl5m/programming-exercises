@@ -114,3 +114,28 @@ console.log(state01);
 // b) use variables to store some specific matrix positions, of your choice. Example move1 = field[0][0]:
 // c) store all moves in an array called game.
 // d) Use a loop of your choice to go through all the positions of the game array, if at least one of the positions has a bomb, the message "you lost" should be displayed, if the whole vector is gone through and no bomb is found, the message "you won" should be displayed as an alert.
+
+// a)
+mineField = [[0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 1], [1, 1, 1, 1]];
+console.log(mineField);
+
+let play1 = mineField[0][1];
+let play2 = mineField[1][0];
+let play3 = mineField[1][1];
+let play4 = mineField[0][0];
+
+plays = [];
+plays.push(play1);
+plays.push(play2);
+//plays.push(play3);
+plays.push(play4);
+console.log(plays);
+
+for(let i = 0; i < plays.length; i++){
+    if(plays[i] == 1){
+        alert("You Lost!");
+    }
+    else if(i == plays.length-1){
+        alert("You Won!");
+    };
+};

@@ -118,7 +118,7 @@ print(list3);
 """
 
 # COPYING LISTS
-
+"""
 listA = ["a", "b", "c"];
 listB = [1, 4, 6];
 
@@ -148,3 +148,102 @@ listD.append("f");
 listC.append("g");
 print(listC);
 print(listD);
+"""
+
+# TUPLES
+"""
+list1 = ["element1", "element2", "element3"];
+print(list1);
+print(len(list1));
+print(type(list1));
+# list == mutable;
+
+print("----"*10);
+
+tuple1 = ("element1", "element2", "element3");
+print(tuple1);
+print(len(tuple1));
+print(type(tuple1));
+print(tuple1[2]);
+# tuple == immutable;
+
+tuple2 = ("element1", "element2", "element3", "element3", "element3");
+print(tuple2);
+print(len(tuple2));
+print(type(tuple2));
+print(tuple2[2]);
+print(tuple2.count("element3"));
+
+# isn't possible to add or subtrack a tuple,
+# but it's possible to rewrite it with new values.
+
+tuple2 = ("item3", "item4", "blue");
+print(tuple2);
+
+# MORE ABOUT TUPLES
+
+# use examples
+fed_units = ("CE", "DF", "GO", "RJ", "SP");
+print(fed_units);
+print(type(fed_units));
+
+months = ("jan", "feb", "mar");
+print(months);
+print(type(months));
+
+tuple3 = (3, 5.0, True, "item");
+
+tuple4 = ("item2", );   #tuple is defined by commas, not by parentheses
+print(tuple4);
+print(type(tuple4));
+
+tuple5 = ("item1", "item2", "item3", "item4");
+list2 = list(tuple5);
+print(tuple5);
+print(list2);
+
+list2.append("item5");
+print(list2);
+
+list2.pop();
+print(list2);
+
+tuple5 = tuple(list2);
+print(tuple5);
+
+# del tuple5; #error, because tuple5 isn't defined anymore
+
+print(tuple5);
+"""
+
+# LOOPS WITH TUPLES
+"""
+tuple1 = ("item1",);
+tuple2 = ("a", "b");
+
+tuple1 = tuple1 + tuple1 + tuple2;
+print(tuple1);
+tuple2 = tuple2 * 3;
+print(tuple2);
+
+for variable in tuple1:
+    print(variable);
+
+for variable in range(len(tuple1)):
+    print(variable, tuple1[variable]);
+"""
+# TUPLE UNPACKING
+
+tupleA = ("item1", "item2", "item3");
+print(tupleA)
+
+(x, y, z) = tupleA;
+print("x:", x);
+print("y:", y);
+print("z:", z);
+
+tupleB = ("item1", "item2", "item3", "item4", "item5");
+(x1, *y1, z1) = tupleB;
+print("x1:", x1);
+print("y1:", y1);
+print("z1:", z1);

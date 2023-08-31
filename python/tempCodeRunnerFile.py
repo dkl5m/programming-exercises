@@ -207,7 +207,6 @@ set9 = {5, 6, 7}
 set10 = set8.union(set9)
 print(set10)
 
-# intersection function
 set11 = {1, 2, 5, 7}
 set12 = set8.intersection(set11)
 print(set12)
@@ -215,13 +214,4 @@ print(set12)
 # or
 
 set8.intersection_update(set11)
-print(set8)
-
-set13 = {1, 2, 5, 7}
-set14 = set8.symmetric_difference(set13)
-print(set14)
-
-# or
-
-set8.symmetric_difference_update(set11)
 print(set8)

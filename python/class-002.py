@@ -12,7 +12,7 @@ while a <= 5:
     print(a)
     a = a + 1
 
-print("Final result of a: ", a);
+print("Final result of a: ", a)
 """
 
 """
@@ -54,13 +54,13 @@ for x in range(6): # range(6) means that it start from 0 until we have 6 digits
 for x in range(2, 5):
     print(x)
 
-for x in range(0, 6, 1): # range(6);
+for x in range(0, 6, 1): # range(6)
     print(x)
 
-for x in range(6): # for(x = 0 x <= 5; x++);
+for x in range(6): # for(x = 0 x <= 5; x++)
     print(x)
 else:
-    print("End!");
+    print("End!")
 """
 
 # Exercise

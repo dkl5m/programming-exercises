@@ -81,7 +81,7 @@ execute()
 
 # FUNCTION PARAMETERS
 
-
+"""
 def my_function():
     var = "Maria"
     return var
@@ -112,3 +112,37 @@ def print_name(name1, surname1):
 name1 = input("What is your name?")
 surname1 = input("What is your surname?")
 function_name(name1, surname1)
+"""
+
+"""
+# NAMED ARGs
+
+
+def print_name(name, surname, age):
+    print("name: ", name)
+    print("surname: ", surname)
+    print("age: ", age)
+
+
+surname = "Clara"
+age = 20
+print_name(surname=surname, age=age, name="Maria")
+"""
+
+# STANDARD PATTERN
+
+
+def print_name(name=None, surname=None, age=None):
+    if name != None:
+        print("name: ", name)
+        print("surname: ", surname)
+        print("age: ", age)
+        print("-------------------")
+    else:
+        print("Please, type your data")
+        print("-------------------")
+
+
+print()
+print_name()
+print_name("Maria", "Clara", 22)

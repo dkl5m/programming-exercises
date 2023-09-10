@@ -133,7 +133,7 @@ print_name(surname=surname, age=age, name="Maria")
 
 
 def print_name(name=None, surname=None, age=None):
-    if name != None:
+    if name is not None:
         print("name: ", name)
         print("surname: ", surname)
         print("age: ", age)
@@ -146,3 +146,19 @@ def print_name(name=None, surname=None, age=None):
 print()
 print_name()
 print_name("Maria", "Clara", 22)
+
+
+def print_immobile(name_immobile, number_rooms, garage_spots=None):
+    print(name_immobile)
+    print("Rooms: ", number_rooms)
+
+    if garage_spots is not None:
+        print("Garage has spots", garage_spots)
+
+
+# Examples of arguments numbers <= parameters numbers
+print_immobile("House 3 rooms - SP", 3)
+print_immobile("Apartment - MG", 2, 1)
+
+# Examples of arguments numbers > parameters numbers
+# print_immobile("Comercial store", 2, 5, "p")

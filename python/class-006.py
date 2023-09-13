@@ -114,9 +114,8 @@ surname1 = input("What is your surname?")
 function_name(name1, surname1)
 """
 
-"""
 # NAMED ARGs
-
+"""
 
 def print_name(name, surname, age):
     print("name: ", name)
@@ -131,7 +130,7 @@ print_name(surname=surname, age=age, name="Maria")
 
 # STANDARD PATTERN
 
-
+"""
 def print_name(name=None, surname=None, age=None):
     if name is not None:
         print("name: ", name)
@@ -162,3 +161,39 @@ print_immobile("Apartment - MG", 2, 1)
 
 # Examples of arguments numbers > parameters numbers
 # print_immobile("Comercial store", 2, 5, "p")
+"""
+
+# ARGS - receive arguments that can be stored in a tuple
+
+"""
+def print_immobile(name_immobile, number_rooms, garage_spots=None, *phones):
+    print(name_immobile)
+    print("Rooms: ", number_rooms)
+
+    if garage_spots is not None:
+        print("Garage has spots", garage_spots)
+    print("Phones: ", phones)
+
+
+print_immobile("Comercial Store:", 2, 5, "61 5555-5555", "85 4444-4444")
+
+
+def print_names(*names):
+    print(names)
+
+#print_names("Ana", "Bia", "Pietro", "Jack")
+list1 = ["Ana", "Bia", "Pietro", "Jack"]
+print_names(*list1)
+"""
+
+# KWAGS - receive arguments that can be stored in a dictionary
+
+
+def print_names(**names):
+    print(f"{names['name']}{names['surname']}")
+
+
+print_names(name="Ana", surname="Bia")
+
+# diction = {'name': 'ana', 'surname': 'julia'}
+# print_names(diction)

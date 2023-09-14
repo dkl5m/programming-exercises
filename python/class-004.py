@@ -1,249 +1,160 @@
-# CHANGING ITENS
-"""
-list = ["horse", "monkey", "dog", "shark", "dragon", "phoenix"];
-print(list);
-
-print(type(list));
-print(list[2]);
-
-list[1] = 'cat';
-print(list);
-
-list[1:4] = ['bat', 'elephant', 'octopus'];
-print(list);
-
-# clue 1
-list[1:2] = ['eagle', 'wolverine'];
-print(list);
-# added a element
-
-print(list[1]);
-print(list[2]);
-print(list[3]);
-
-# clue 2
-list[1:5] = ['shark'];
-print(list);
-print(len(list));
-# subtrack elements
+# NAMED ARGs
 """
 
-# ADDING ELEMENTS
-"""
-# index     0   1   2
-list1 = ["car", "boat", "plane"];
-print(list1);
+def print_name(name, surname, age):
+    print("name: ", name)
+    print("surname: ", surname)
+    print("age: ", age)
 
-for x in range(len(list1)):
-    print(x, list[x]);
 
-text = "car, plane";
-list2 = list(text);
-print(list2);
-
-text = text.split(',');
-print(text);
-
-# good to split email names
-
-list3 = ["car", "boat", "plane"];
-print(list3);
-
-# adding element to the end of the list
-
-list3.append('motorcycle');
-print(list3);
-print(len(list3));
-
-for x in range(len(list3)):
-    print(x, list[x]);
-
-# adding more than 1 element with append(list inside of a list)
-
-list3.append(['bicycle', 'tricycle']);
-print(list3);
-print(len(list3));
-
-# inserting elements in a chosen place
-
-list3.insert(1, 'monocycle');
-print(list3);
-print(len(list3));
-
-# adding more than 1 element (separated)
-
-list3.extend('bicycle', 'tricycle');
-print(list3);
-print(len(list3));
+surname = "Clara"
+age = 20
+print_name(surname=surname, age=age, name="Maria")
 """
 
-# REMOVE AND ORDENATE
+# STANDARD PATTERN
+
 """
-list = ["car", "boat", "plane", "motorcycle"];
+def print_name(name=None, surname=None, age=None):
+    if name is not None:
+        print("name: ", name)
+        print("surname: ", surname)
+        print("age: ", age)
+        print("-------------------")
+    else:
+        print("Please, type your data")
+        print("-------------------")
 
-# remove the last element of the list
-list.pop();
 
-# remove the specified element by me
-list.remove("car");     # using element
-list.pop(1);            # using index
-del list[0];            # delet element using index
-del list;               # delet list
+print()
+print_name()
+print_name("Maria", "Clara", 22)
 
-bucket = ["product1", "product2", "product3"];
-print(bucket);
-for x in range(len(bucket)):
-    print(bucket[x]);
 
-bucket.clear();         # clear the elements in the vector;
+def print_immobile(name_immobile, number_rooms, garage_spots=None):
+    print(name_immobile)
+    print("Rooms: ", number_rooms)
 
-bucket = ["bread", "meat", "product3"];
-bucket.sort();
+    if garage_spots is not None:
+        print("Garage has spots", garage_spots)
 
-list2 = [1,50, 34, 68, 100];
-list2.sort();           # ordenate to smaller to the greater;
-print(list);
 
-list2.sort(reverse = True);             # ordenate to greater to the smaller;
-print(list2);
+# Examples of arguments numbers <= parameters numbers
+print_immobile("House 3 rooms - SP", 3)
+print_immobile("Apartment - MG", 2, 1)
 
-list2.reverse();        # reverse the elements of the list;
-print(list2);
-
-list3 = ["Ana", "Pedro", "Marta", "Larissa", "beatriz", "ana clara"];
-print(list3);
-
-list3.sort(key = str.lower);    # key to the sort
-print(list3);
+# Examples of arguments numbers > parameters numbers
+# print_immobile("Comercial store", 2, 5, "p")
 """
 
-# COPYING LISTS
+# ARGS - receive arguments that can be stored in a tuple
+
 """
-listA = ["a", "b", "c"];
-listB = [1, 4, 6];
+def print_immobile(name_immobile, number_rooms, garage_spots=None, *phones):
+    print(name_immobile)
+    print("Rooms: ", number_rooms)
 
-listA += listB;                  # listA + listB
-print(listA);
+    if garage_spots is not None:
+        print("Garage has spots", garage_spots)
+    print("Phones: ", phones)
 
-# listA.extend(listB);             # listA + listB
-# print(listA);
 
-# for x in listB:                  # listA + listB
-#     listA.append(x);
-# print(listA);
+print_immobile("Comercial Store:", 2, 5, "61 5555-5555", "85 4444-4444")
 
-listC = listB;
-print(listC);
 
-listC.append("d");
-listB.append("e");
+def print_names(*names):
+    print(names)
 
-print(listC);
-print(listB);
-
-listD = listC.copy();
-print(listD);
-
-listD.append("f");
-listC.append("g");
-print(listC);
-print(listD);
+#print_names("Ana", "Bia", "Pietro", "Jack")
+list1 = ["Ana", "Bia", "Pietro", "Jack"]
+print_names(*list1)
 """
 
-# TUPLES
+# KWAGS - receive arguments that can be stored in a dictionary
 """
-list1 = ["element1", "element2", "element3"];
-print(list1);
-print(len(list1));
-print(type(list1));
-# list == mutable;
+def print_names(**names):
+    print(f"{names['name']}{names['surname']}")
 
-print("----"*10);
 
-tuple1 = ("element1", "element2", "element3");
-print(tuple1);
-print(len(tuple1));
-print(type(tuple1));
-print(tuple1[2]);
-# tuple == immutable;
+print_names(name="Ana", surname="Bia")
 
-tuple2 = ("element1", "element2", "element3", "element3", "element3");
-print(tuple2);
-print(len(tuple2));
-print(type(tuple2));
-print(tuple2[2]);
-print(tuple2.count("element3"));
-
-# isn't possible to add or subtrack a tuple,
-# but it's possible to rewrite it with new values.
-
-tuple2 = ("item3", "item4", "blue");
-print(tuple2);
-
-# MORE ABOUT TUPLES
-
-# use examples
-fed_units = ("CE", "DF", "GO", "RJ", "SP");
-print(fed_units);
-print(type(fed_units));
-
-months = ("jan", "feb", "mar");
-print(months);
-print(type(months));
-
-tuple3 = (3, 5.0, True, "item");
-
-tuple4 = ("item2", );   #tuple is defined by commas, not by parentheses
-print(tuple4);
-print(type(tuple4));
-
-tuple5 = ("item1", "item2", "item3", "item4");
-list2 = list(tuple5);
-print(tuple5);
-print(list2);
-
-list2.append("item5");
-print(list2);
-
-list2.pop();
-print(list2);
-
-tuple5 = tuple(list2);
-print(tuple5);
-
-# del tuple5; #error, because tuple5 isn't defined anymore
-
-print(tuple5);
+# diction = {'name': 'ana', 'surname': 'julia'}
+# print_names(diction)
 """
 
-# LOOPS WITH TUPLES
+# RECURSION
+
+# IMPERATIVE PARADIGM
+
 """
-tuple1 = ("item1",);
-tuple2 = ("a", "b");
+def decreaseNumber(int_num):
+    while int_num > 0:
+        print(int_num)
+        int_num -= 1
 
-tuple1 = tuple1 + tuple1 + tuple2;
-print(tuple1);
-tuple2 = tuple2 * 3;
-print(tuple2);
 
-for variable in tuple1:
-    print(variable);
-
-for variable in range(len(tuple1)):
-    print(variable, tuple1[variable]);
+decreaseNumber(6)
 """
-# TUPLE UNPACKING
+"""
+1 - check if our number is not zero
+2 - If it is not zero -> decrease one unit
 
-tupleA = ("item1", "item2", "item3");
-print(tupleA)
+5 (n-1)
+  4 (5-1)
+    3 (4-1)
+      2 (3-1)
+        1 (2-1)
+          0 (1-1)
+"""
 
-(x, y, z) = tupleA;
-print("x:", x);
-print("y:", y);
-print("z:", z);
+# RECURSIVE PARADIGM
 
-tupleB = ("item1", "item2", "item3", "item4", "item5");
-(x1, *y1, z1) = tupleB;
-print("x1:", x1);
-print("y1:", y1);
-print("z1:", z1);
+"""
+def decreaseNumber(int_number):
+    print(int_number)
+    if int_number > 0:
+        # N - 1
+        decreaseNumber(int_number - 1)
+
+
+decreaseNumber(5)
+"""
+
+"""
+def factorialS(number):  # factorial without recursion
+
+    factorial = 1
+    if number == 0:
+        return 1
+    else:
+        for x in range(1, number + 1):
+            factorial *= x
+        return factorial
+
+
+# print(factorialS(5))
+
+
+def factorialR(number):  # factorial with recursion
+    if number == 0:  # Stopping criterion
+        return 1
+    else:
+        # recursive call parameter
+        return number * factorialR(number - 1)
+
+
+print(factorialR(5))
+"""
+"""
+# Recursion may be inefficient
+
+3! = 3*2*1
+   = 3*2!
+   = 3*2*1!
+
+2! = 2*1
+   = 2*1!
+
+1! = 1
+0! = 1
+"""

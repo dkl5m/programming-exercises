@@ -52,6 +52,7 @@ int main(){
 // and displays the result of the sum of the 3 values
 // generated on the screen
 
+/*
 int main(){
     srand(time(NULL));
 
@@ -69,4 +70,122 @@ int main(){
 
     return 0;
 }
+*/
+
+// WHILE
+// Used for validation
+
+// Exercise 1
+// Write a program that print the values from 0 to 10
+// using while
+
+/*
+int main(){
+    int i = 0;
+
+    while(i <= 10){
+        printf("%d \n", i);
+        i++; // can increase the i, with i += value
+    }
+
+    return 0;
+}
+*/
+
+// Exercise 2
+// // Write a program that print the values from 10 to 0
+// using while
+
+/*
+int main(){
+    int i = 10;
+
+    while(i > -1){
+        printf("%d \n", i);
+        i-=1; // can increase the i, with i += value
+    }
+
+    return 0;
+}
+*/
+
+// Exercise 3
+// Write a program that stop if a number is equal to 10
+// using while and validation
+
+/*
+int main(){
+    int i = 0;
+
+    while(i != 10){
+        printf("Type 10:");
+        scanf("%d", &i);
+    }
+
+    printf("End!\n");
+
+    return 0;
+}
+*/
+
+// Exercise 4
+// Write a program that stop if a number is bigger than 10
+// using while and validation
+
+/*
+int main(){
+    int i = 0;
+
+    while(i < 10){
+        printf("Type a number bigger than 10: ");
+        scanf("%d", &i);
+    }
+
+    printf("End!");
+
+    return 0;
+}
+*/
+
+// Exercise 5
+// Write a program that stop when if one of the numbers is
+// bigger than 10
+
+/*
+int main(){
+    int a = 0, b = 0;
+
+    while(a < 10 || b < 10){
+        printf("Type two numbers bigger than 10\n");
+
+        printf("Type 1st number bigger than 10: ");
+        scanf("%d", &a);
+        
+        printf("Type 2nd number bigger than 10: ");
+        scanf("%d", &b);
+    }
+
+    printf("End!\n");
+
+    return 0;
+}
+*/
+
+// DO WHILE
+
+// Exercise 1
+// Write a program to explain the functionality of Do While
+
+/*
+int main(){
+    int i = 10;
+
+    do{
+        printf("It will be executed at least one time.\n");
+        printf("Even if the condition is false.\n");
+    }while(i < 5);
+    
+    return 0;
+}
+*/
 

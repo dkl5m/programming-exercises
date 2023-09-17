@@ -189,3 +189,49 @@ int main(){
 }
 */
 
+// Exercise 2
+
+// Write a program that print the values from 50 to 0
+// decreasing from 6 to 6, using while
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    int i = 50;
+    
+    while(i > -1){
+        printf("%d\n", i);
+        i-=6;
+    };
+    
+    return 0;
+}
+*/
+
+// Exercise 3
+
+// Write a program that prints even numbers
+// from 10 to a number entered by the user
+
+#include <stdio.h>
+
+int main()
+{
+    int i = 10;
+    int a = 0;
+    
+    printf("Type an integer: ");
+    scanf("%d", &a);
+    
+    while(i <= a){
+        if(i % 2 == 0){
+        printf("%d\n", i);
+    }
+        i+=1;
+    };
+    
+    return 0;
+}
+

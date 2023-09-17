@@ -2,236 +2,177 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*
-// RANDOM NUMBER FROM 0 TO 9
-
-// Exercise 001
-// Make a program that returns a random number
-
-int main(){
-    // Use the actual time like a seed
-    srand(time(NULL));
-
-    // Create a random number from 0 to 9
-    int r = rand() % 10;
-
-    // Print the generated number
-    printf("Generated number: %d\n", r);
-
-    return 0;
-}
-*/
-
-/*
-// RANDOM NUMBER WITH INTERVAL
-
-
-// Exercise 001
-// Make a program that returns a random number between
-// 9 and 14
-
-int main(){
-    // Use the actual time like a seed
-    srand(time(NULL));
-
-    int min = 5;
-    int max = 14;
-
-    // Create a random number from 5 to 14
-    int r = (rand() % (max - min + 1)) + min;
-
-    // Print the generated number
-    printf("Generated number: %d\n", r);
-
-    return 0;
-}
-*/
-
-// Exercise 3
-// Write a program that rolls 3 random dice (six sides)
-// and displays the result of the sum of the 3 values
-// generated on the screen
-
-/*
-int main(){
-    srand(time(NULL));
-
-    int min = 1;
-    int max = 6;
-    int sum = 0;
-
-    int r1 = (rand() % (max - min + 1)) + min;
-    int r2 = (rand() % (max - min + 1)) + min;
-    int r3 = (rand() % (max - min + 1)) + min;
-
-    sum = r1 + r2 + r3;
-    printf("Values: %d, %d, %d\n", r1, r2, r3);
-    printf("Sum: %d\n", sum);
-
-    return 0;
-}
-*/
-
-// WHILE
-// Used for validation
+// CONST
 
 // Exercise 1
-// Write a program that print the values from 0 to 10
-// using while
+// Print different types of variables
 
 /*
+#define CONST 5
+#define FLOAT 9.3
+#define LETTER 'a'
+
 int main(){
-    int i = 0;
+    const int NUM = 10;
 
-    while(i <= 10){
-        printf("%d \n", i);
-        i++; // can increase the i, with i += value
-    }
-
+    printf("%d \n", CONST);
+    printf("%f \n", FLOAT);
+    printf("%c \n", LETTER);
+    printf("%d \n", NUM);
+    
     return 0;
 }
 */
 
-// Exercise 2
-// // Write a program that print the values from 10 to 0
-// using while
-
-/*
-int main(){
-    int i = 10;
-
-    while(i > -1){
-        printf("%d \n", i);
-        i-=1; // can increase the i, with i += value
-    }
-
-    return 0;
-}
-*/
-
-// Exercise 3
-// Write a program that stop if a number is equal to 10
-// using while and validation
-
-/*
-int main(){
-    int i = 0;
-
-    while(i != 10){
-        printf("Type 10:");
-        scanf("%d", &i);
-    }
-
-    printf("End!\n");
-
-    return 0;
-}
-*/
-
-// Exercise 4
-// Write a program that stop if a number is bigger than 10
-// using while and validation
-
-/*
-int main(){
-    int i = 0;
-
-    while(i < 10){
-        printf("Type a number bigger than 10: ");
-        scanf("%d", &i);
-    }
-
-    printf("End!");
-
-    return 0;
-}
-*/
-
-// Exercise 5
-// Write a program that stop when if one of the numbers is
-// bigger than 10
-
-/*
-int main(){
-    int a = 0, b = 0;
-
-    while(a < 10 || b < 10){
-        printf("Type two numbers bigger than 10\n");
-
-        printf("Type 1st number bigger than 10: ");
-        scanf("%d", &a);
-        
-        printf("Type 2nd number bigger than 10: ");
-        scanf("%d", &b);
-    }
-
-    printf("End!\n");
-
-    return 0;
-}
-*/
-
-// DO WHILE
+// VECTOR
 
 // Exercise 1
-// Write a program to explain the functionality of Do While
+/*
+#define SIZE 2 // defining const
+
+int main(){
+    
+    // defining vectors
+    int int_vector[] = {1,2,3,4};
+    float float_vector[3] = {1.5, 2.0, 2.5};
+    char char_vector[SIZE] = {'a', 'b'};
+
+    // modifying value per assignment
+    int_vector[0] = 9;
+
+    // modifying value with var
+    float new_value = 5.8;
+    float_vector[2] = new_value;
+
+    // modifying value with user
+    printf("Type a new letter: ");
+    scanf(" %c", &char_vector[0] );
+
+    // printing vectors
+    int i = 0;
+    printf("\nvector 1: \n");
+    for(i = 0; i < 4; i++){
+        printf("%d\n", int_vector[i]);
+    }
+
+    printf("\nvector 2: \n");
+    for(i = 0; i < 3; i++){
+        printf("%f\n", float_vector[i]);
+    }
+    
+    printf("\nvector 3: \n");
+    for(i = 0; i < SIZE; i++){
+        printf("%c\n", char_vector[i]);
+    }
+
+    // reading values for all the vector
+    printf("\n Type integers: \n");
+    for(i = 0; i < 4; i++){
+        printf("Reading in vector[%d]:", i);
+        scanf("%d", &int_vector[i]);
+    }
+
+    // printing this updated vector
+    for(i = 0; i < 4; i++){
+        printf("%d\n", int_vector[i]);
+    }
+
+    return 0;
+}
+*/
+
+// STRING
+
+// Exercise 1
+// Program to show different types of string
 
 /*
 int main(){
-    int i = 10;
 
-    do{
-        printf("It will be executed at least one time.\n");
-        printf("Even if the condition is false.\n");
-    }while(i < 5);
+    // defining different forms strings
+    char word1[] = "cow";
+    char word2[5] = "ball";
+    char word3[] = {'a', 'b', 'c', 'd', '\0'};
+    char word4[6] = {'p', 'h', 'o', 'n', 'e', '\0'};
+
+    // printing string (without spaces)
+    printf("%s \n", word1);
+
+    // reading a string (without spaces)
+    printf("Type a word with 4 letters: \n");
+    fflush(stdin);
+    scanf(" %s", word2);
+    
+    // reading a string (with spaces)
+    char fruit[255];
+    fflush(stdin);
+    printf("Type the name of a fruit: \n");
+    fgets(fruit, sizeof(fruit), stdin);
+
+    //printing the read fruit
+    printf("Read fruit:");
+    puts(fruit);
     
     return 0;
 }
 */
 
-// Exercise 2
+// MATRIX
 
-// Write a program that print the values from 50 to 0
-// decreasing from 6 to 6, using while
+// Exercise 1
+// Make a program that ask to build a matrix 2x3
 
 /*
-#include <stdio.h>
+#define ROW 2
+#define COLUMN 3
 
-int main()
-{
-    int i = 50;
+int main(){
     
-    while(i > -1){
-        printf("%d\n", i);
-        i-=6;
-    };
-    
+    // Create matrix
+    int matrix[ROW][COLUMN];
+    int i, j;
+
+    // Read the values to matrix
+    for(i = 0; i < ROW; i++){
+        for(j = 0; j < COLUMN; j++){
+            scanf("%d", &matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Print the values to matrix
+    for(i = 0; i < ROW; i++){
+        for(j = 0; j < COLUMN; j++){
+            printf("%d", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
     return 0;
 }
 */
 
-// Exercise 3
+// VOID FUNCTION
 
-// Write a program that prints even numbers
-// from 10 to a number entered by the user
+// Exercise 1
+// Make an example with a void function
 
-#include <stdio.h>
+/*
+// void function (Don't return anything on the end)
+void drawSeparator(){
+    printf("\n--------------\n");
+}
 
-int main()
-{
-    int i = 10;
-    int a = 0;
-    
-    printf("Type an integer: ");
-    scanf("%d", &a);
-    
-    while(i <= a){
-        if(i % 2 == 0){
-        printf("%d\n", i);
-    }
-        i+=1;
-    };
+int main(){
+    // Call the function and execute what is inside it
+    drawSeparator();
+    printf("Hi");
+    drawSeparator();
+    printf("How you doin?");
+    drawSeparator();
+    printf("It's the end! Go away! It's over!");
+    drawSeparator();
     
     return 0;
 }
-
+*/

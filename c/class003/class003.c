@@ -176,3 +176,116 @@ int main(){
     return 0;
 }
 */
+
+// LOCAL AND GLOBAL SCOPE
+
+// Exercise 1
+// Void function without parameter in local scope
+
+/*
+// Void function
+void printA(){
+    int a = 10;
+    printf("'A' value in the function: %d\n", a);
+}
+
+int main(){
+    // Define 'a' value in main scope
+    int a = 15;
+    printf("'A' value outside of the function: %d\n", a);
+
+    printA();
+    
+    // Print printA function 'a' var
+    printf("'A' value outside of the function: %d\n", a);
+
+    return 0;
+}
+*/
+
+/*
+// Exercise 2
+// Void function in global scope
+
+int globalExample = 20;
+
+// Void function
+void printA(){
+    int a = 10;
+    printf("'A' value in the function: %d\n", a);
+    globalExample = 50;
+}
+
+int main(){
+    // Define 'a' value in main scope
+    int a = 15;
+    printf("'A' value outside of the function: %d\n", a);
+    printf("Global example value: %d\n", globalExample);
+
+    printA();
+    
+    // Print printA function 'a' var
+    printf("'A' value outside of the function: %d\n", a);
+    printf("Global example NEW value: %d\n", globalExample);
+
+    return 0;
+}
+*/
+
+// RECURSION
+
+/*
+// Exercise 1
+// Recursion example
+
+int value = 0;
+
+void addOneUntil10(){
+    // If value is less than 10
+    if(value < 10){
+        // Print on screen
+        printf("%d\n", value);
+
+        value++;
+
+        // Call function again
+        addOneUntil10();
+    }
+}
+
+int main(){
+        // Call the function once
+        addOneUntil10();
+
+        // Finish the recursion
+        printf("End");
+
+        return 0;
+    }
+*/
+
+// FUNCTIONS WITH RETURN
+
+int return10(){
+    int a = 10;
+    return a;
+}
+
+int returnFloat(){
+    float a = 5.5;
+    return a;
+}
+
+char returnLetter(){
+    return 'a';
+}
+
+int main(){
+    printf("Return 10 of function: %d\n", return10());
+    
+    float float_number = returnFloat();
+    printf("Return float: %f\n", float_number);
+    
+    printf("Return letter: %c\n", returnLetter());    
+    return 0;
+}

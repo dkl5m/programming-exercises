@@ -266,6 +266,10 @@ int main(){
 
 // FUNCTIONS WITH RETURN
 
+// Exercise 1
+// Make an example using functions with return
+
+/*
 int return10(){
     int a = 10;
     return a;
@@ -287,5 +291,126 @@ int main(){
     printf("Return float: %f\n", float_number);
     
     printf("Return letter: %c\n", returnLetter());    
+    return 0;
+}
+*/
+
+// FUNCTIONS WITH PARAMETERS
+
+// Exercise 1
+// Make an example using functions with parameters
+
+/*
+void printSum(int a, int b){
+    printf("\nSum: %d", a + b);
+}
+
+int returnSum(int a, int b){
+    int sum = a + b;
+    return sum;
+}
+
+float returnWithPlus10(float a){
+    return a + 10.0;
+}
+
+int main(){
+    // Sending just to print
+    int value1, value2;
+    printf("Insert two integers:");
+    scanf("%d %d", &value1, &value2);
+    printSum(value1, value2);
+
+    printf("\n\nResult sum 20 + 30: %d\n", returnSum(20, 30));
+
+    // Receiving value of a function to a var
+    float finalValue = returnWithPlus10(15.0);
+    printf("\nValue with plus 10: %.2f\n", finalValue);
+
+    return 0;
+}
+*/
+
+// STRUCT
+
+/*
+// Exercise 1
+// Make an example using structs
+
+struct Person{  // Defining the "form" to persons
+    int age;    // Age attribute
+    float gain; // Gain attribute
+};
+
+int main(){
+    Person person1;
+    person1.age = 18;
+    person1.gain = 1200.0;
+    printf("%d years, gain $%.2f", person1.age, person1.gain);
+
+    return 0;
+}
+*/
+
+// Exercise 2
+// Make an example using structs that are read by user
+
+/*
+struct Person{      // Defining the "form" to persons
+    int age;        // Age attribute
+    float gain;     // Gain attribute
+    char name[255]; // Name attribute
+};
+
+int main(){
+    struct Person person1; // Create struct of person type
+    
+    printf("Insert the age:");
+    scanf(" %d", &person1.age);
+    
+    printf("Insert the gain:");
+    scanf(" %f", &person1.gain);
+    
+    printf("Insert the name:");
+    scanf(" %s", &person1.name);
+
+    // printing
+    printf("Name: %s \n", person1.name);
+    printf("%d years, gain $%.2f", person1.age, person1.gain);
+
+    return 0;
+}
+*/
+
+// Exercise 3
+// Make an example using structs that are read by user
+
+#include <string.h>
+
+struct Person{      // Defining the "form" to persons
+    int age;        // Age attribute
+    float gain;     // Gain attribute
+    char name[255]; // Name attribute
+};
+
+int main(){
+    struct Person people[2]; // Create struct of person type
+    
+    people[0].age = 18;                 // Change age
+    people[0].gain = 1200.0;            // Change gain
+    strcpy(people[0].name, "Stupid");   // Change name
+    
+    people[1].age = 19;
+    people[1].gain = 1300.0;
+    strcpy(people[1].name, "Asshole");
+    
+    int i;
+    // print list of people
+    for(i = 0; i < 2; i++){
+        printf("\nName: %s\n", people[i].name);
+        printf("%d years\n", people[i].age);
+        printf("gain $%.2f\n", people[i].gain);
+    }
+    
     return 0;
 }

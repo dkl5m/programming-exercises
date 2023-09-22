@@ -3,6 +3,7 @@ using namespace std;
 
 // CLASS AND OBJECTS
 
+/*
 class Cookie{           // Defining class Cookie
     public:             // Acess modified
         float price;    // Price attribute
@@ -22,6 +23,52 @@ int main(){
     cout << " costs $" << cookie1.price << "\n";
     cout << "Cookie2:" << cookie2.taste;
     cout << " costs $" << cookie2.price << "\n";
+
+    return 0;
+}
+*/
+
+// CLEANING THE INPUT BUFFER
+
+#include <ios>
+#include <limits>
+
+/*
+int main(){
+    char phrase[80];
+
+    cout << "Write a phrase: ";
+    cin.sync();                 // Clean the buffer
+
+    cin.getline(phrase, 80);
+    cout << "\nPhrase:" << phrase <<"\n";
+
+    return 0;
+}
+*/
+
+// READING CLASS VALUES
+
+class Cookie {
+    public:
+        float price;
+        string flavor;
+};
+
+int main(){
+    Cookie cookie1;
+
+    cout << "Type the cookie price: ";
+    cin >> cookie1.price;
+
+    cout << "Type the cookie flavor: ";
+    cin. sync();
+
+    getline(cin, cookie1.flavor );
+
+    cout << "Cookie1:" << cookie1.flavor;
+    cout << " costs $" << cookie1.price;
+
 
     return 0;
 }

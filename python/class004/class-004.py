@@ -1,3 +1,14 @@
+import prime
+
+from random import (
+    random,
+    choice
+)
+
+from package1 import principal, secondary
+from package1.sub import cubic as other
+
+
 # NAMED ARGs
 """
 
@@ -157,4 +168,49 @@ print(factorialR(5))
 
 1! = 1
 0! = 1
+"""
+
+# MODULE
+
+"""
+# import prime
+# import random
+
+# from random import (
+#    random,
+#    choice
+# )
+
+# import random as rd
+
+# from random import (
+#    random as rd,
+#    choice as ch
+# )
+
+
+print(prime.prime(1))
+print(random())
+
+list1 = ["rock", 'paper', 'scissors']
+print(choice(list1))
+"""
+
+#  IMPORT
+
+"""
+# from random import * #Import all the module
+
+## module - archives with extension .py - py archives
+## packages - directories that contain a set of modules
+##            folders with multiple files
+
+
+# from package1 import principal, secondary
+# from package1.sub import cubic as other
+
+
+print(principal.sum(2, 3))
+print(secondary.squared(2))
+print(other.cubic(4))
 """

@@ -1,13 +1,14 @@
+"""
 import prime
-
 from random import (
     random,
     choice
 )
-
 from package1 import principal, secondary
 from package1.sub import cubic as other
-
+import prime
+"""
+import os
 
 # NAMED ARGs
 """
@@ -214,3 +215,131 @@ print(principal.sum(2, 3))
 print(secondary.squared(2))
 print(other.cubic(4))
 """
+
+"""
+Dunder Objects
+Dunder - Double underscore
+Magic Attributes - vars
+Magic Methods - functions
+use "dir()" to see the functions on the dir
+
+__init__ - Python 2.x -> create __init__.py inside
+           the directory to make it a package
+__name__
+__main__
+__file__
+__doc__ - Docstring
+"""
+
+"""
+# import prime
+print("Hello")
+print(prime.prime(7))
+"""
+
+# MANIPULATING ARCHIVES
+
+"""
+# import os
+
+# verify if an archive exists
+print(os.path.exists('text.py'))
+
+# verify if an folder exists
+print(os.path.exists('class003'))
+
+# paths
+print(os.path.exists('class003/class-003.py'))
+
+# creating archives
+# os.mknod('arch.py')
+
+# creating directories
+# os.mkdir("python")
+
+# creating using absolute path
+# os.mkdir('home/Music/.../package1/pythonExample.py')
+
+
+# creating using relative path
+# os.mkdir('./package1/pythonExample.py')
+
+# deleting archives
+# os.remove('arch.py')
+
+# deleting directories
+# os.rmdir("python")
+
+#os.mknod("hello.py")
+#os.mkdir("new_folder")
+#os.mknod("./new_folder/test.py")
+
+# renaming archive
+# os.rename('hello.py', 'hello_world.py')
+
+# renaming folder
+# os.rename('new_folder', 'new_folder1')
+
+# renaming with path
+# os.rename('./new_folder/test.py', './new_folder/test1.py')
+"""
+
+# SIMPLE TEXT ARCHIVES
+
+# READING
+"""
+# ALL LANGUAGES WAY
+
+# use var to receive the file
+archs = open("./new_folder/test.txt")
+# print the line of the file
+print(archs.readline())
+# print all the file
+# print(archs.read())
+# print if the file is closed
+print(archs.closed)
+# close the file
+archs.close()
+print(archs.closed)
+"""
+
+# PYTHON WAY
+"""
+# Indent open archive, read, modify and close
+with open('./new_folder/test.txt') as archs:
+    print(archs.read())
+    print(archs.closed)
+print(archs.closed)
+"""
+
+# WRITING
+
+# ALL LANGUAGES WAY
+"""
+# the "r" means read, "w" means write, with the
+# cursor going to the first position, "a" means
+# appen, with the cursor continuing the writing on
+# the last position
+
+arch = open('./new_folder/test.txt', 'w')
+# This way, the write will overwrite what was written
+arch.write("Game Over")
+arch.close()
+"""
+
+# PYTHON WAY
+
+
+# this way, the test isn't overwritten
+with open('./new_folder/test.txt', 'w') as archs:
+    archs.write("\nHow is the World?")
+    archs.write("\nHow about you?")
+
+
+# can be done as a var too, but it will overwrite what was
+# there before
+
+text = "King"
+
+with open('./new_folder/test.txt', 'w') as archs:
+    archs.write(text)

@@ -272,7 +272,7 @@ print(os.path.exists('class003/class-003.py'))
 
 #os.mknod("hello.py")
 #os.mkdir("new_folder")
-#os.mknod("./new_folder/test.py")
+#os.mknod("./class004/new_folder/test.py")
 
 # renaming archive
 # os.rename('hello.py', 'hello_world.py')
@@ -281,7 +281,7 @@ print(os.path.exists('class003/class-003.py'))
 # os.rename('new_folder', 'new_folder1')
 
 # renaming with path
-# os.rename('./new_folder/test.py', './new_folder/test1.py')
+# os.rename('./class004/new_folder/test.py', './class004/new_folder/test1.py')
 """
 
 # SIMPLE TEXT ARCHIVES
@@ -291,7 +291,7 @@ print(os.path.exists('class003/class-003.py'))
 # ALL LANGUAGES WAY
 
 # use var to receive the file
-archs = open("./new_folder/test.txt")
+archs = open("./class004/new_folder/test.txt")
 # print the line of the file
 print(archs.readline())
 # print all the file
@@ -306,7 +306,7 @@ print(archs.closed)
 # PYTHON WAY
 """
 # Indent open archive, read, modify and close
-with open('./new_folder/test.txt') as archs:
+with open('./class004/new_folder/test.txt') as archs:
     print(archs.read())
     print(archs.closed)
 print(archs.closed)
@@ -321,7 +321,7 @@ print(archs.closed)
 # appen, with the cursor continuing the writing on
 # the last position
 
-arch = open('./new_folder/test.txt', 'w')
+arch = open('./class004/new_folder/test.txt', 'w')
 # This way, the write will overwrite what was written
 arch.write("Game Over")
 arch.close()
@@ -331,7 +331,7 @@ arch.close()
 
 
 # this way, the test isn't overwritten
-with open('./new_folder/test.txt', 'w') as archs:
+with open('./class004/new_folder/test.txt', 'w') as archs:
     archs.write("\nHow is the World?")
     archs.write("\nHow about you?")
 
@@ -341,5 +341,5 @@ with open('./new_folder/test.txt', 'w') as archs:
 
 text = "King"
 
-with open('./new_folder/test.txt', 'w') as archs:
+with open('./class004/new_folder/test.txt', 'w') as archs:
     archs.write(text)

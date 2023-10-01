@@ -50,7 +50,7 @@ Discret-event simulation (change in time) -> OOP
 Relationship -> highlighting functions(methods) and variables(attributes)
 
 -----------------------------------------------------------
-Class:
+- Class:
 
 Class is a structure that abstracts a set of objects with similar
 characteristics. Defining the behavior of your objects through structures:
@@ -58,6 +58,11 @@ characteristics. Defining the behavior of your objects through structures:
 2 - Methods
 
 The class defines an abstract data type
+
+- Object:
+an object is the representation of a concept/entity in the real world,
+which can be physical or conceptual and has a well-defined meaning for a
+given software
 """
 
 # abstraction

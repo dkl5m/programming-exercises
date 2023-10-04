@@ -74,32 +74,53 @@ print(student1.name)
 
 
 class Person:
-    def __init(self):
-        self.name = None
-        self.date_birth = None
-        self.general_registry = None
-        self.ppr = None
+
+    # (superclass) - Parent class
+
+    def __init__(self, name=None, date=None, general_registry=None, ppr=None):
+        self.name = name
+        self.date_birth = date
+        self.general_registry = general_registry
+        self.ppr = ppr
+        print("Class Person")
 
     def print_name(self):
         return self.name
 
 
-class Student:
-    def __init__(self):
+class Student(Person):
+
+    # (subclass) - Child class
+
+    def __init__(self, name):
+        super().__init__(name)
         self.registration = None
         self.grades = []
+        print("Class Student")
 
     def studying(self):
         return "studying..."
 
 
-class Professor:
-    def __init__(self):
+class Professor(Person):
+    def __init__(self, name):
+        super().__int__(name)
         self.classes = []
 
     def teaching(self):
         return "teaching..."
 
 
-student1 = Student()
-professor1 = Professor()
+student1 = Student('Ana')
+print(student1.print_name())
+
+professor1 = Professor('Karine')
+print(professor1.print_name())
+
+print(student1.studying())
+print(professor1.teaching())
+
+"""
+print(type(student1))
+print(type(professor1))
+"""

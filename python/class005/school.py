@@ -72,7 +72,7 @@ print(student1.name)
 
 # SIMPLE HERITAGE
 
-
+"""
 class Person:
 
     # (superclass) - Parent class
@@ -119,8 +119,65 @@ print(professor1.print_name())
 
 print(student1.studying())
 print(professor1.teaching())
-
+"""
 """
 print(type(student1))
 print(type(professor1))
 """
+
+# POLYMORPHISM
+
+"""
+Polymorphism just exists if heritage exists
+It is not necessary to apply
+each object will shape the way to execute the same method
+
+"""
+
+
+class Person:
+
+    def __init__(self, name=None, date=None, general_registry=None, ppr=None):
+        self.name = name
+        self.birth_date = date
+        self.general_registry = general_registry
+        self.ppr = ppr
+
+    def print_name(self):
+        return self.name
+
+    def work(self):
+        print("working...")
+
+
+class Admin(Person):
+    pass
+
+
+class Professor(Person):
+
+    def __init__(self, name):
+        super().__init__(name)
+        self.classes = []
+
+    def work(self):
+        class_name = self.__class__.__name__
+        print(f"Class {class_name} Teaching...")
+
+
+class Student(Person):
+
+    def __init__(self, name):
+        super().__init__(name)
+        self.registration = None
+        self.grades = []
+        print("Class Student")
+
+    def studying(self):
+        return "studying..."
+
+
+professor1 = Professor('Rambo')
+admin1 = Admin()
+professor1.work()
+admin1.work()

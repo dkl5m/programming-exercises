@@ -134,7 +134,8 @@ each object will shape the way to execute the same method
 
 """
 
-
+"""
+# Abstract class - not used to make instances
 class Person:
 
     def __init__(self, name=None, date=None, general_registry=None, ppr=None):
@@ -150,9 +151,76 @@ class Person:
         print("working...")
 
 
+# Concrete class - used to make instances or objects
 class Admin(Person):
     pass
 
+
+# Concrete class - used to make instances or objects
+class Professor(Person):
+
+    def __init__(self, name):
+        super().__init__(name)
+        self.classes = []
+
+    def work(self):
+        class_name = self.__class__.__name__
+        print(f"Class {class_name} Teaching...")
+
+
+# Concrete class - used to make instances or objects
+class Student(Person):
+
+    def __init__(self, name):
+        super().__init__(name)
+        self.registration = None
+        self.grades = []
+        print("Class Student")
+
+    def studying(self):
+        return "studying..."
+
+
+professor1 = Professor('Rambo')
+admin1 = Admin()
+professor1.work()
+admin1.work()
+"""
+
+# ABSTRACT CLASS
+"""
+from abc import ABC, abstractmethod
+
+
+# Abstract class - not used to make instances, become super class
+class Person(ABC):
+
+    def __init__(self, name=None, date=None, general_registry=None, ppr=None):
+        self.name = name
+        self.birth_date = date
+        self.general_registry = general_registry
+        self.ppr = ppr
+        print("Running the Person class constructor")
+
+    def print_name(self):
+        return self.name
+
+    @abstractmethod  # make the class abstract
+    def work(self):
+        pass
+
+
+# Concrete class - used to make instances or objects
+class Admin():
+
+    def work(self):
+        return super().work()
+
+
+# The abstract method serves as a template and will make all classes that
+# inherit from the abstract class required to implement this method
+
+# person1 = Person() can't be used
 
 class Professor(Person):
 
@@ -179,5 +247,5 @@ class Student(Person):
 
 professor1 = Professor('Rambo')
 admin1 = Admin()
-professor1.work()
 admin1.work()
+"""

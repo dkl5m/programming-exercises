@@ -26,3 +26,34 @@ var birdX = 33;
 var birdY = 200;
 var gravity = 1.4;
 var score = 0;
+var pipe = [];
+
+pipe[0] = {
+    x : canvas.width,
+    y : 0
+}
+
+// Key capture
+document.addEventListener("keydown",fly);
+
+// Flying
+function fly(){
+    bY = bY - 26;
+    fly.play();
+}
+
+function game(){
+    // Game bg -> drawImage(image, X, Y)
+    ctx.drawImage(bg,0,0);
+
+    // Ground
+    ctx.drawImage(ground,0,canvas.height - ground.height);
+
+    // Bird
+    ctx.drawImage(bird, birdX, birdY);
+    bY += gravity;
+
+    requestAnimationFrame(game);
+}
+
+game();

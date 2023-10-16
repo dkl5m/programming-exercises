@@ -21,7 +21,7 @@ scor.src = "sounds/score.mp3"
 
 // Variables
 var constant;
-var eec = 100;
+var sbp = 100;
 var birdX = 33;
 var birdY = 200;
 var gravity = 1.4;
@@ -45,6 +45,25 @@ function fly(){
 function game(){
     // Game bg -> drawImage(image, X, Y)
     ctx.drawImage(bg,0,0);
+
+    // Creating pipes
+    for(let i=0; i<pipe.length; i++){
+        // Down pipe position
+        constant = pipeFromAbove.height + sbp;
+        // Pipe from above position
+        ctx.drawImage(pipeFromAbove, pipe[i].x, pipe[i].y);
+        // Down pipe config
+        ctx.drawImage(downPipe, ppipe[i].x, pipe[i].y + constant);
+        // Pipe movimentation
+        pipe[i].x = pipe[i].x - 1
+        // Creating new pipes
+        if(pipe[i].x == 125){
+            pipe.push({
+                x : canvas.width,
+                y : Math.floor(Math.random()*pipeFromAbove.height)-pipeFromAbove.height
+            })
+        }
+    }
 
     // Ground
     ctx.drawImage(ground,0,canvas.height - ground.height);

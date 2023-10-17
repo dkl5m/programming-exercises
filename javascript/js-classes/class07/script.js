@@ -63,6 +63,22 @@ function game(){
                 y : Math.floor(Math.random()*pipeFromAbove.height)-pipeFromAbove.height
             })
         }
+
+        // Bird between the pipe borders
+        if(bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeFromAbove.width
+            // Bird colided with pipe from above or from down pipe
+            && (bY <= pipe[i].y + pipeFromAbove.height || bY + bird.height >= pipe[i].y + constant)
+            // Bird colided with the ground
+            || bY + bird.height >= canvas.height - ground.height){
+                location.reload();
+            }
+            
+            // Scoring points
+            if(pipe[i].x == 5){
+                score = score + 1;
+                scor.play();
+            }
+
     }
 
     // Ground
@@ -71,6 +87,11 @@ function game(){
     // Bird
     ctx.drawImage(bird, birdX, birdY);
     bY += gravity;
+
+    // Game scoreboard
+    ctx.fillStyle = "#000";
+    ctx.font = "20px Verdana";
+    ctx.fillStyle("Scoreboard: " + score, 10, canvas.height - 20);
 
     requestAnimationFrame(game);
 }

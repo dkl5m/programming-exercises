@@ -70,6 +70,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Checking pairs
+    function checkForMatch(){
+        var cards = document.querySelectorAll('img')
+        const optionOneId = cardsChosenId[0]
+        const optionTwoId = cardsChosenId[1]
+
+        // Click twice in the same card
+        if(optionOneId == optionTwoId){
+            cards[optionOneId].setAttribute('src', 'images/card.png')
+            cards[optionTwoId].setAttribute('src', 'images/card.png')
+            alert("You clicked on the same image!")
+        }
+
+        // Making a pair
+        else if(cardsChosen[0] == cardsChosen[1]){
+            alert("You made a pair!")
+            cards[optionOneId].setAttribute('src', 'images/white.png')
+            cards[optionTwoId].setAttribute('src', 'images/white.png')
+            cards[optionOneId].removeEventListener('click', flipCard)
+            cards[optionTwoId].removeEventListener('click', flipCard)
+            pairs.push(cardsChosen)
+        }
+    }
+
     // Flipping cards
     function flipCard(){
         var cardId = this.getAttribute('data-id')

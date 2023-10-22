@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Checking pairs
-    function checkForMatch(){
+    function checkforMatch(){
         var cards = document.querySelectorAll('img')
         const optionOneId = cardsChosenId[0]
         const optionTwoId = cardsChosenId[1]
@@ -92,6 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[optionTwoId].removeEventListener('click', flipCard)
             pairs.push(cardsChosen)
         }
+        // Doesn't made a pair
+        else {
+            cards[optionOneId].setAttribute('src', 'images/card.png')
+            cards[optionTwoId].setAttribute('src', 'images/card.png')
+            alert("Ops! Play again :)")
+        }
+        cardsChosen = []
+        cardsChosenId = []
+        resultDisplay.textContent = pairs.length
+
+        if(pairs.length == cardArray.length/2){
+            resultDisplay.textContent = "Congratulations! You found all the pairs!"
+        }
     }
 
     // Flipping cards
@@ -101,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
         if(cardsChosen.length == 2){
-            setTimeout(checkForMatch, 500)
+            setTimeout(checkforMatch, 500)
         }
     }
 

@@ -28,6 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
     function jump(){
         let count = 0
         let timerId = setInterval(function(){
+            // Falling
+            if(count == 15){
+                clearInterval(timerId)
+                let downTimerId = setInterval(function(){
+                    if(count == 0){
+                        clearInterval(downTimerId)
+                        jumping = false
+                    }
+                    dinopy -= 5
+                    count--
+                    dinopy = dinopy * gravity
+                    dino.style.bottom = dinopy + 'py'
+                }, 20)
+            }
             // Going up
             dinopy += 30
             count ++
@@ -35,5 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
             dino.style.bottom = dinopy + 'px'
         }, 20)
     }
-
 })

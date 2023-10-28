@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // references
     const dino = document.querySelector('.dino')
     const grid = document.querySelector('.grid')
-    const body = document.querySelector('.body')
-    const alert = document.querySelector('.alert')
+    const body = document.querySelector('body')
+    const alert = document.getElementById('alert')
 
     // vars
     let jumping = false
@@ -49,4 +49,37 @@ document.addEventListener('DOMContentLoaded', () => {
             dino.style.bottom = dinopy + 'px'
         }, 20)
     }
+
+    function generateObstacle(){
+        let randomTime = Math.random()*4000
+        let obstaclepx = 1000
+        const obstacle = document.createElement('div')
+
+        // Creating copies
+        if(!gameo) obstacle.classList.add('obstacle')
+        grid.appendChild(obstacle)
+        obstacle.style.left = obstaclepx + 'px'
+
+        // Game logic + obstacle moviment
+        let timerId = setInterval(function() {
+            // Player colision
+            if(obstaclepx > 0 && obstaclepx < 60 && dinopy < 60){
+                clearInterval(timerId)
+                alert.innerHTML = 'Game Over'
+                gameo = true
+                // Removing copies
+                body.removeChild(body.firstChild)
+                while(grid.firstChild){
+                    grid.removeChild(grid.lastChild)
+                }
+            }
+            // Obstacle moviment to the left
+            obstacle -= 10
+            obstacle.style.left = obstaclepx = 'px'
+        }, 20)
+
+        if(!gameo) setTimeout(generateObstacle, randomTime)
+    }
+
+    generateObstacle()
 })

@@ -1,4 +1,5 @@
 <?php
+    /*
     $name = "K";
     $age = "25";
 
@@ -44,4 +45,31 @@
         echo '<br/>';
         $i++;
     }
+    */
+
+    function sum($n1, $n2){
+        // logic
+        return $n1+$n2;
+    }
+
+    echo sum(10,20);
+
+    function verifyName($name){
+        if($name == 'Krinson'){
+            return 2.5;
+        }else{
+            return false;
+        }
+    }
+
+    if(verifyName('Krinson') == '2.5'){
+        echo 'True';
+    }
+
+    function verifyName1($name = 'Krinson1'){
+        echo $name;
+    }
+
+    verifyName1();
+
 ?>

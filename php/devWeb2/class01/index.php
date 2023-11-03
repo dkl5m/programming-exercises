@@ -47,6 +47,7 @@
     }
     */
 
+    /*
     function sum($n1, $n2){
         // logic
         return $n1+$n2;
@@ -71,5 +72,19 @@
     }
 
     verifyName1();
+    */
+
+    $phrase = 'Kal is a dev';
+    //$newPhrase = str_replace('Kal', 'Tank', $phrase);
+    //echo $newPhrase;
+
+    //$newPhrase = substr($phrase,0,4);
+    //echo $newPhrase;
+
+    $newPhrase = explode(' ', $phrase);
+    //print_r($newPhrase);
+
+    $newPhrase = implode(' ', $newPhrase);
+    echo $newPhrase;
 
 ?>

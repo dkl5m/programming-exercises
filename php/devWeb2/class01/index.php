@@ -74,6 +74,7 @@
     verifyName1();
     */
 
+    /*
     $phrase = 'Kal is a dev';
     //$newPhrase = str_replace('Kal', 'Tank', $phrase);
     //echo $newPhrase;
@@ -86,5 +87,8 @@
 
     $newPhrase = implode(' ', $newPhrase);
     echo $newPhrase;
+    */
+
+    
 
 ?>
